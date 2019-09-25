@@ -10,7 +10,7 @@ import (
 )
 
 // DbClient ...
-var DbClient *db.BoltClient
+var DbClient db.IBoltClient
 
 // GetAccount ...
 func GetAccount(w http.ResponseWriter, r *http.Request) {

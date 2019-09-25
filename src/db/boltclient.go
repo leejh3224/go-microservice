@@ -25,6 +25,13 @@ type AccountRepository interface {
 	QueryAccount(accountID string) (model.Account, error)
 }
 
+// IBoltClient ...
+type IBoltClient interface {
+	Initializer
+	Seeder
+	AccountRepository
+}
+
 // BoltClient ...
 type BoltClient struct {
 	boltDB *bolt.DB
